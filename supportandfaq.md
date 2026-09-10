@@ -40,7 +40,15 @@ A: Some potential use cases for llama-cli in industry and academia include:
 * Image and object detection tasks in various applications
 * Automated data processing and analysis in industries such as healthcare, finance, and more
 
-## Contact for help (do not spam this) 
+## Where to find support
 
-Discord: ramennoodlesyt
-Email: ramennoodlesyt69@gmail.com
+1. **Llama Foundation Documentation**: The official documentation for llama-cli is a great place to start, covering topics like installation, usage, and troubleshooting.
+2. **Llama Community Forum**: The Llama Foundation has a community forum where users can ask questions, share knowledge, and get help with issues.
+3. **Llama Discord Server**: The official Discord server for llama-cli also serves as a hub for community support, where users can post questions and receive help from other users.
+4. **Llama GitHub Repository**: The official GitHub repository for llama-cli contains issues, bug reports, and feature requests, which can be used to track down and help with specific issues.
+5. **Stack Overflow**: Stack Overflow is a Q&A platform where users can post questions related to llama-cli. You can search for existing questions and try to help with similar issues.
+6. **Llama Slack Channel (if available)**: If the Llama Foundation or its contributors maintain a Slack channel for llama-cli, you can try reaching out to them for support.
+7. **Llama GitHub Issue Tracker**: The Llama GitHub repository has an issue tracker where users can submit new issues or report bugs.
+8. **Llama Community Members**: You can also try reaching out to other users who are familiar with llama-cli and may be able to offer guidance or help with specific issues.
+9. **Llama Support E-mail**: You can submit an email to the Llama Foundation's support email address (listed in the documentation) with a detailed description of your issue, and they'll do their best to respond and help.
+10. **Llama Community on Social Media**: The Llama Foundation may have social media accounts (e.g., Twitter, Facebook) where they post updates, and you can try reaching out to them for support.
