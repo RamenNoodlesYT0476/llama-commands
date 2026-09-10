@@ -1,4 +1,4 @@
-## In llama.cpp (and its wrapper llama-cli), these single-letter flags control model memory, context size, and processing speed.
+# In llama.cpp (and its wrapper llama-cli), these single-letter flags control model memory, context size, and processing speed.
 
 -c # (Context Size / n_ctx): Sets the context window length in tokens (e.g., -c 4096 or -c 8192). This determines the maximum total length of text (input prompt + generated response) the model can process at one time.
 
