@@ -228,6 +228,81 @@ Some specific examples of issues users have reported include:
 
 ---
 
+## Training 
+
+**Prerequisites:**
+
+* Install the required packages: `pip install transformers`
+* Download the Llama model: `python -m tera.download_model "llama"`
+* Prepare your dataset for training
+
+**Step 1: Data Preparation**
+
+1. Collect a diverse dataset with text examples (e.g., articles, books, product reviews)
+2. Preprocess the text data:
+	* Tokenize text into individual words or subwords
+	* Remove special characters, punctuation, and stopwords
+	* Convert text to lowercase
+3. Split the dataset into training (~80%), validation (~10%), and testing sets
+
+**Step 2: Model Training**
+
+1. Define the Llama model architecture:
+	* `model_name`: "bert-base-uncased" or "roberta-base"
+	* `num_layers`: 2 or 3
+	* `num_heads`: 12 or 16
+	* `hidden_size`: 768 or 1024
+2. Create a custom Llama model class or use the default `llama` model
+3. Pass the dataset and hyperparameters to the model during training
+4. Monitor the training process and adjust hyperparameters as needed
+
+**Step 3: Model Evaluation**
+
+1. Evaluate the model on the validation set:
+	* Calculate precision, recall, F1-score, and other metrics
+2. Compare the model's performance to a reference model (e.g., a pre-trained language model)
+
+**Step 4: Fine-Tuning and Serving**
+
+1. Fine-tune the Llama model on a specific task or dataset
+2. Deploy the trained model using a framework like TensorFlow Serving or AWS Lambda
+
+Example Code:
+
+```python
+import pandas as pd
+import torch
+from transformers import LlamaModel, AutoModelForCausalLanguageTranslation
+
+# Load dataset
+df = pd.read_csv("my_dataset.csv")
+
+# Prepare data
+tokens = df["text"].apply(lambda x: x.lower()).values
+subwords = [x[:3] for x in tokens]
+dataset = torch.utils.data.Dataset(tokens, subwords)
+
+# Define Llama model
+model = LlamaModel.from_pretrained("llama")
+
+# Fine-tune model
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+model.to(device)
+criterion = torch.nn.CrossEntropyLoss()
+optimizer = torch.optim.Adam(model.parameters(), lr=1e-5)
+for epoch in range(5):
+    for batch in dataset:
+        input_ids = batch["input_ids"].to(device)
+        attention_mask = batch["attention_mask"].to(device)
+        labels = batch["labels"].to(device)
+        optimizer.zero_grad()
+        outputs = model(input_ids, attention_mask=attention_mask, labels=labels)
+        loss = criterion(outputs, labels)
+        loss.backward()
+        optimizer.step()
+    print(f"Epoch {epoch+1}, Loss: {loss.item():.4f}")
+
+
 ## Contributing
 
 Pull requests and issues are welcome! Feel free to open a ticket to submit bug fixes, optimize command flags, or improve installation documentation.
