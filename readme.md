@@ -17,7 +17,7 @@ A comprehensive guide for installing, configuring, and running local Large Langu
 - [Quick Start](#quick-start)
 - [CLI Command Reference](#cli-command-reference)
 - [Hardware Performance Optimization](#hardware-performance-optimization)
-- [Troubleshooting](#troubleshooting)
+- [Troubleshooting](#troubleshooting/bugs)
 - [Contributing](#contributing)
 - [License](#license)
 
