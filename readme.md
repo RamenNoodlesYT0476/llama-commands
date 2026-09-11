@@ -158,6 +158,11 @@ Below is a breakdown of the core command-line flags accepted by `llama-cli`:
 | `-hf` | `--hf-repo` | `STRING` | Automatically fetches GGUF models directly from Hugging Face repository endpoints. |
 | `-m` | `--model` | `PATH` | Direct filepath to a locally stored `.gguf` model file. |
 
+
+General command: llama-cli -hf unsloth/Llama-3.2-1B-Instruct-GGUF:Q4_0 -c # -b # -ub # -t # -cnv
+
+Optimized command for MacBook Neo: llama-cli -hf unsloth/Llama-3.2-1B-Instruct-GGUF:Q4_0 -c 8192 -b 128 -ub 64 -t 6 -cnv
+
 ---
 
 ## Hardware Performance Optimization
