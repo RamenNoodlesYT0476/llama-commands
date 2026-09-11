@@ -17,3 +17,4 @@ Open Terminal (`Cmd + Space` -> type **Terminal** -> press `Enter`) and run:
 
 ```bash
 /bin/bash -c "$(curl -fsSL [https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh](https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh))"
+
