@@ -183,7 +183,7 @@ llama-cli -hf unsloth/Llama-3.2-1B-Instruct-GGUF:Q4_0 -c 8192 -ngl 99 -cnv
 
 ---
 
-## Troubleshooting
+## Troubleshooting/Bugs
 
 <details>
 <summary><b>1. Out of Memory (OOM) Errors or CUDA Allocation Failures</b></summary>
@@ -206,6 +206,25 @@ llama-cli -hf unsloth/Llama-3.2-1B-Instruct-GGUF:Q4_0 -c 8192 -ngl 99 -cnv
 - On Linux/macOS, ensure `/usr/local/bin` or `~/.brew/bin` is in your system `$PATH`.
 - On Windows using CMake, run the executable directly from `.\build\bin\Release\llama-cli.exe` or add the directory to your System Environment Variables.
 </details>
+
+---
+
+1. **Llama model not trained**: One of the most common issues is that the Llama model may not be trained or may not have been trained properly, leading to failed predictions or incorrect outputs.
+2. **Model performance issues**: The Llama model may have performance issues, such as slow training times, high memory requirements, or frequent errors.
+3. **Llama model not available**: The Llama model may not be available for use, resulting in errors or unexpected behavior.
+4. **Token mismatch**: The Llama model requires a specific token type or format, and a mismatch may occur, leading to errors or unexpected behavior.
+5. **Llama model not compatible with certain frameworks**: The Llama model may not be compatible with certain frameworks or libraries, such as TensorFlow, PyTorch, or Keras.
+6. **Llama model not compatible with certain data formats**: The Llama model may not be compatible with certain data formats, such as CSV, JSON, or Avro.
+7. **Llama model not able to handle large amounts of data**: The Llama model may struggle with large amounts of data, resulting in slow training times or errors.
+8. **Llama model not able to handle high-dimensional data**: The Llama model may not be able to handle high-dimensional data, such as images or text data.
+9. **Llama model not able to handle categorical data**: The Llama model may not be able to handle categorical data, resulting in errors or incorrect outputs.
+10. **Llama model not able to handle out-of-distribution data**: The Llama model may not be able to handle data that is outside the training distribution, resulting in errors or incorrect outputs.
+
+Some specific examples of issues users have reported include:
+
+* **Llama model not recognizing image labels**: Users have reported that the Llama model is having trouble recognizing image labels, such as object detection or image classification.
+* **Llama model not able to handle text data**: Users have reported that the Llama model is having trouble handling text data, such as sentiment analysis or language translation.
+* **Llama model not able to handle high-dimensional data**: Users have reported that the Llama model is struggling with large amounts of data, resulting in slow training times or errors.
 
 ---
 
